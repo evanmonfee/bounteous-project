@@ -1,0 +1,41 @@
+<div class="container mb-4">
+    <h3 class="mb-4 mt-4">{{tabName}} </h3>
+
+    <form #f="ngForm" novalidate>
+        <div class="card">
+            <!-- START - Card Header  -->
+            <div class="card-header">
+                <div class="form-group">
+                    <label for="newFruit">Fruit:</label>
+
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="newFruit" [(ngModel)]="model.newFruit" placeholder="Enter the name of the fruit to be added." />
+
+                        <div class="input-group-append">
+                            <button class="btn btn-primary btn-sm" type="submit" (click)="onAddClick()">Add to List</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END - Card Header  -->
+
+            <div class="card-body">
+
+                <h6 class="card-title">Available List of fruits</h6>
+                <!-- START - Card List  -->
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let item of model.fruitList; let i=index"> {{item}}</li>
+                </ul>
+                <!-- END - Card List  -->
+            </div>
+
+            <div class="card-footer text-right">
+                <button class="btn btn-danger btn-sm" (click)="resetList()">Reset to Default</button>
+            </div>
+        </div>
+
+    </form>
+
+    <!-- <pre>{{f.value | json}}</pre> -->
+
+</div>

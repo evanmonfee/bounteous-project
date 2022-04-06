@@ -1,0 +1,20 @@
+<div class="container">
+    <h2 class="mb-5 mt-3 text-lg-center">{{title}}</h2>
+
+    <div role="navigation">
+        <!-- START - Tabs. -->
+        <ul class="nav nav-tabs nav-justified">
+            <li class="nav-item" *ngFor="let tab of tabList let i = index;" (click)="onTabChange(tab)">
+                <a href="javascript:void(0)" class="nav-link" [ngClass]="{'active': tab.active}">{{tab.title}}</a>
+            </li>
+        </ul>
+        <!-- END - Tabs. -->
+    </div>
+
+    <!-- START - Tabs -->
+    <ng-container *ngFor="let tab of tabList; let i=index">
+        <app-tab-form tabName="{{tab.title}}" *ngIf="tab.active"></app-tab-form>
+    </ng-container>
+    <!-- END - Tabs -->
+
+</div>
