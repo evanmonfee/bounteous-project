@@ -5,10 +5,11 @@ import { TabsRoutingModule } from './tabs-routing.module';
 import { TabsComponent } from './tabs/tabs.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TabInnerComponent } from './tabs/tab-form/tab-form.component';
+import { PageFormComponent } from './tabs/page-form/page-form.component';
 
 
 @NgModule({
-  declarations: [TabsComponent, TabInnerComponent],
+  declarations: [TabsComponent, TabInnerComponent, PageFormComponent],
   imports: [
     CommonModule,
     TabsRoutingModule,
