@@ -8,6 +8,8 @@
 
 ### Output Screenshot
 
+![enter image description here](https://i.imgur.com/h8I8d91.png)
+
 ![enter image description here](https://i.imgur.com/pK2EmLt.png)
 
 ## Installation
