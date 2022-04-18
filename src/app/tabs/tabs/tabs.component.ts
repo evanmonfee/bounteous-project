@@ -7,20 +7,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabsComponent implements OnInit {
 
-  title = "Bounteous Assignment - Tabs";
+  title = "Bounteous Assignment - Notebook";
 
   tabList = [
-    { title: "Tab List 1", active: true },
-    { title: "Tab List 2", active: false },
-    { title: "Tab List 3", active: false },
-    { title: "Tab List 4", active: false },
-    { title: "Tab List 5", active: false },
+    { title: "Page 1", active: true },
+    { title: "Page 2", active: false },
+    { title: "Page 3", active: false },
+    { title: "Page 4", active: false },
+    { title: "Page 5", active: false },
   ]
 
   constructor() { }
 
   ngOnInit(): void {
     
+  }
+
+  /**
+   * Navigate across the pages
+   * @param selectedPage - the currently selected page index passed from the view.
+   */
+  onPageChange(selectedPage){
+    this.tabList.forEach(
+      (item) =>{
+        item.active = false;
+      }
+    );
+    selectedPage.active = true;
   }
 
   /**

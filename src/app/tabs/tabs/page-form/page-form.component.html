@@ -1,0 +1,28 @@
+<div class="container mb-4">
+
+    <form #f="ngForm" novalidate>
+        <div class="card">
+            <div class="card-header">
+                <h4><i class="fa fa-file pr-3" aria-hidden="true"> </i>
+                    {{pageTitle}}</h4>
+            </div>
+            <div class="card-body">
+
+                <div class="form-group">
+                    <label for="outputDocument" class="text-uppercase">New Document</label>
+                    <textarea class="form-control" name="outputDocument" [(ngModel)]="pageModel.enteredText" rows="7"
+                        placeholder="Enter the text here.."></textarea>
+                </div>
+
+            </div>
+
+            <div class="card-footer text-right">
+                <button class="btn btn-primary btn-sm mr-2" (click)="updatePage()">Save Document</button>
+                <button class="btn btn-danger btn-sm" (click)="reset()">
+                    <i class="fa fa-refresh pr-2" aria-hidden="true"></i>Reset to Default</button>
+            </div>
+
+        </div>
+    </form>
+
+</div>
